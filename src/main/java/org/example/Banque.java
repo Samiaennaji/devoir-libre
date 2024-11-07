@@ -23,4 +23,11 @@ public class Banque {
         }
         return null;
     }
+    //methode recherche de compte
+    public Compte RechercheCompte(String numcompte) {
+        for (Compte compte : comptes) {
+            if (compte.getNumcompte().equals(numcompte)) return compte;
+        }
+        return null;
+    }
 }
