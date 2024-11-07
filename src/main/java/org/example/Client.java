@@ -1,4 +1,5 @@
 package org.example;
+import com.sun.tools.jconsole.JConsoleContext;
 import lombok.Setter;
 import lombok.Getter;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,7 @@ public class Client {
     private String email;
     private Set<Compte> comptes;
 
+    //constructeur de client
     public Client(String numclient,String nom,String prenom,String adress,int phone,String email){
      this.numclient=UUID.randomUUID().toString();
      this.nom=nom;
@@ -29,11 +31,12 @@ public class Client {
      this.phone=phone;
      this.email=email;
     }
-
+    //methode de l'ajout d'un client
     public void AjoutClient(Compte compte){
         this.comptes.add(compte);
         compte.setClients(this);
     }
+    //methode de la creation du compte
     public void CreationCompte(Banque banque){
         Date datecreation = new Date();
         String numcompte = UUID.randomUUID().toString();

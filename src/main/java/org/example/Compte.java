@@ -16,7 +16,8 @@ public class Compte {
     private Client clients;
     private Set<Transaction> transactions;
 
-    public Compte (String numcompte, Date datecreation, Date date, String dhs, Banque banque, Client client){
+    //constructeur du compte
+    public Compte(String numcompte, Date datecreation, Date date, String dhs, Banque banque, Client client){
         this.numcompte=numcompte;
         this.datecreation=new Date();
         this.dateupdate=new Date();
@@ -24,5 +25,6 @@ public class Compte {
         this.banques=banque;
         this.clients=client;
     }
+
 
 }

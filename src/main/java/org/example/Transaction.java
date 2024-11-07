@@ -12,6 +12,7 @@ public class Transaction {
     private final String reference;
     private Set<Compte> comptes;
 
+   //constructeur de transaction
     public Transaction(TransactionType T,Compte compte1,Compte compte2){
         this.T=T;
         this.reference=UUID.randomUUID().toString();

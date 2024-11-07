@@ -1,22 +1,26 @@
 package org.example;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.AllArgsConstructor;
 
 import java.util.Set;
 
 @Setter
 @Getter
-@AllArgsConstructor
 
 public class Banque {
     private String id;
     private String pays;
     private Set<Compte> comptes;
-
-    public Client Recherche(String numclient){
+    //constructeur de banque
+    public Banque(String id,String pays){
+        this.id=id;
+        this.pays=pays;
+    }
+//methode de recherche de client
+    public Client RechercheClient(String numclient){
         for(Compte compte:comptes){
             if(compte.getClients().getNumclient().equals(numclient)) return compte.getClients();
         }
+        return null;
     }
 }
