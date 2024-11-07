@@ -21,8 +21,13 @@ public class Client {
     private String email;
     private Set<Compte> comptes;
 
-    public Client(){
-
+    public Client(String numclient,String nom,String prenom,String adress,int phone,String email){
+     this.numclient=UUID.randomUUID().toString();
+     this.nom=nom;
+     this.prenom=prenom;
+     this.adress=adress;
+     this.phone=phone;
+     this.email=email;
     }
 
     public void AjoutClient(Compte compte){
