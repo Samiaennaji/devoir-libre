@@ -8,11 +8,11 @@ import java.util.Set;
 @Getter
 
 public class Banque {
-    private String id;
+    private int id;
     private String pays;
     private Set<Compte> comptes;
     //constructeur de banque
-    public Banque(String id,String pays){
+    public Banque(int id,String pays){
         this.id=id;
         this.pays=pays;
     }
