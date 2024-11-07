@@ -1,6 +1,7 @@
 package org.example;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 @Getter
@@ -20,8 +21,9 @@ public class Transaction {
         this.comptes.add(compte2);
 
         if(compte1.getBanques().equals(compte2.getBanques())) T=TransactionType.VIREST;
-        else if (compte1.getBanques().getId().equals(compte2.getBanques().getId())) T=TransactionType.VIRIN;
+        else if (Objects.equals(compte1.getBanques().getId(), compte2.getBanques().getId())) T=TransactionType.VIRIN;
         else if (compte1.getBanques().getPays().equals(compte2.getBanques().getPays())) T=TransactionType.VIRMULTA;
         else T=TransactionType.VIRCHA;
     }
+
 }

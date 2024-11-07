@@ -8,7 +8,7 @@ import java.util.Set;
 @Getter
 @Setter
 public class Compte {
-    private String numcompte;
+    private int numcompte;
     private Date datecreation;
     private Date dateupdate;
     private String devise;
@@ -17,7 +17,7 @@ public class Compte {
     private Set<Transaction> transactions;
 
     //constructeur du compte
-    public Compte(String numcompte, Date datecreation, Date date, String dhs, Banque banque, Client client){
+    public Compte(int numcompte, Date datecreation, Date date, String dhs, Banque banque, Client client){
         this.numcompte=numcompte;
         this.datecreation=new Date();
         this.dateupdate=new Date();

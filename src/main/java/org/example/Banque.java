@@ -2,6 +2,7 @@ package org.example;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Setter
@@ -19,14 +20,14 @@ public class Banque {
 //methode de recherche de client
     public Client RechercheClient(String numclient){
         for(Compte compte:comptes){
-            if(compte.getClients().getNumclient().equals(numclient)) return compte.getClients();
+            if(Objects.equals(compte.getClients().getNumclient(), numclient)) return compte.getClients();
         }
         return null;
     }
     //methode recherche de compte
     public Compte RechercheCompte(String numcompte) {
         for (Compte compte : comptes) {
-            if (compte.getNumcompte().equals(numcompte)) return compte;
+            if (Objects.equals(compte.getNumcompte(), numcompte)){ return compte;}
         }
         return null;
     }
