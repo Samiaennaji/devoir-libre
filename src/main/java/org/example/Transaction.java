@@ -2,6 +2,7 @@ package org.example;
 import lombok.Getter;
 import java.util.Date;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 public class Transaction {
@@ -10,9 +11,9 @@ public class Transaction {
     private final String reference;
     private Set<Compte> comptes;
 
-    public Transaction(TransactionType T,Date timestu,String ref){
+    public Transaction(TransactionType T,Date timestu){
         this.T=T;
-        this.reference=ref;
+        this.reference=UUID.randomUUID().toString();
         this.timestump=timestu;
 
     }
