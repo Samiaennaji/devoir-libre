@@ -14,12 +14,11 @@ public class Transaction {
 
    //constructeur de transaction
     public Transaction(TransactionType T,Compte compte1,Compte compte2){
-        this.T=T;
+      //  this.T=T;
         this.reference=UUID.randomUUID().toString();
         this.timestump=new Date();
         this.comptes=new HashSet<>();
         this.comptes.add(compte1);
         this.comptes.add(compte2);
-
     }
 }
