@@ -6,4 +6,6 @@ import lombok.AllArgsConstructor;
 @Setter
 @AllArgsConstructor
 public class Transaction {
+    private final TransactionType T;
+
 }
