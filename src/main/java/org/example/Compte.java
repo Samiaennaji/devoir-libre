@@ -8,14 +8,17 @@ import java.util.Set;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class Compte {
-    private String nomcompte;
+    private String numcompte;
     private Date datecreation;
     private Date dateupdate;
-    private String device;
+    private String devise;
     private Banque banques;
     private Client clients;
     private Set<Transaction> transactions;
+
+    public Compte (){
+
+    }
 
 }

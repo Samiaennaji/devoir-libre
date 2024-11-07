@@ -13,4 +13,10 @@ public class Banque {
     private String id;
     private String pays;
     private Set<Compte> comptes;
+
+    public Client Recherche(String numclient){
+        for(Compte compte:comptes){
+            if(compte.getClients().getNumclient().equals(numclient)) return compte.getClients();
+        }
+    }
 }
